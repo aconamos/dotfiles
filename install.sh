@@ -47,8 +47,8 @@ install_rust_things() {
 }
 
 
-# install_deps
-# install_rust_things
+install_deps
+install_rust_things
 
 # This section of the script is also mostly plagiarized from github/JJGO.
 OLD_DOTFILES="dotfile_bk_$(date -u +"%Y%m%d%H%M%S")"
