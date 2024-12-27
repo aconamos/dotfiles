@@ -16,7 +16,7 @@ install_deps() {
 
     # Lazy method
     echo "Running install command instead of checking for packages first (lazy method)..."
-    sudo apt install gcc cmake
+    sudo apt install gcc cmake zsh
 }
 
 # Deprecated in favor of simpler version
