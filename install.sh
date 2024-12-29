@@ -50,6 +50,8 @@ install_rust_things() {
 install_deps
 install_rust_things
 
+# This 'cd' is worth nothing. Just, like, look at it. And think about your directory. And where you are, man. Crazy.
+cd
 # This section of the script is also mostly plagiarized from github/JJGO.
 OLD_DOTFILES="dotfile_bk_$(date -u +"%Y%m%d%H%M%S")"
 mkdir $OLD_DOTFILES
@@ -68,7 +70,6 @@ for dir in ~/.config ~/.tmux ~/.tmux.conf ~/.vim ~/.vimrc ~/.zshrc; do
     rm -rf $dir
 done
 
-cd
 ln -sf dotfiles/dot-config ~/.config
 ln -sf dotfiles/dot-tmux ~/.tmux
 ln -sf dotfiles/dot-tmux.conf ~/.tmux.conf
