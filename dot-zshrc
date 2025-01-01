@@ -75,10 +75,10 @@ plugins=(git asdf)
 . "$HOME/.cargo/env"
 # source $ZSH/oh-my-zsh.sh
 
-alias l='eza -l --header'
-alias la='eza -lAh'
-alias ls='l'
-alias ll='eza -lag --header'
+alias ls='eza -lh'
+alias l='ls'
+alias la='eza -lagh'
+alias ll='la'
 alias grep='grep --color=auto'
 
 alias dockercomprehensiveupdate='docker compose down && docker compose pull && docker compose up -d && docker compose logs -f'
