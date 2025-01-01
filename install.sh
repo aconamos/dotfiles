@@ -16,7 +16,7 @@ install_deps() {
 
     # Lazy method
     echo "Running install command instead of checking for packages first (lazy method)..."
-    sudo apt install gcc cmake zsh
+    sudo apt install gcc cmake zsh fish
 }
 
 # Deprecated in favor of simpler version
@@ -50,7 +50,9 @@ install_rust_things() {
 install_deps
 install_rust_things
 
-# This 'cd' is worth nothing. Just, like, look at it. And think about your directory. And where you are, man. Crazy.
+# This isn't going to play well on some systems. Too lazy to fix it right now, though.
+chsh -s /usr/bin/fish
+# This 'cd' is worth noting. Just, like, look at it. And think about your directory. And where you are, man. Crazy.
 cd
 # This section of the script is also mostly plagiarized from github/JJGO.
 OLD_DOTFILES="dotfile_bk_$(date -u +"%Y%m%d%H%M%S")"
