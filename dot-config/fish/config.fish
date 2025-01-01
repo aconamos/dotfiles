@@ -1,3 +1,5 @@
+fish_add_path ~/.cargo/bin
+
 if status is-interactive
     # Commands to run in interactive sessions can go here
     abbr -a ls eza -lh
@@ -6,12 +8,9 @@ if status is-interactive
     abbr -a ll la
     abbr -a grep grep --color=auto
 
-    abbr -a temp cd $(mktemp -d)
-
     # --universal --export
     set -Ux EDITOR vim
 
-    # source $HOME/.cargo/env
     starship init fish | source
 end
 
