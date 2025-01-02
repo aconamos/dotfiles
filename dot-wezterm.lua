@@ -63,7 +63,7 @@ config.initial_cols = 100
 config.adjust_window_size_when_changing_font_size = false
 config.window_close_confirmation = 'NeverPrompt'
 
--- Sathya Tadinada
+-- Function modified, originally from Sathya Tadinada
 local function center_window_once(window)
     wezterm.GLOBAL.windows_centered = wezterm.GLOBAL.windows_centered or {}
   
@@ -72,24 +72,28 @@ local function center_window_once(window)
       return
     end
   
+    -- Change the width and height
     local screen = wezterm.gui.screens().active
     local ratio = 0.65
-
     local width = screen.width * ratio
     local height = screen.height * ratio 
   
     window:set_inner_size(width, height)
   
-    local dimensions = window:get_dimensions()
-    local x = (screen.width - dimensions.pixel_width) * 0.5
-    local y = (screen.height - dimensions.pixel_height) * 0.5
+    -- Set the actual location of the window
+    -- Ideally, you would use get_dimensions(), but this seems to return
+    -- wrong dimensions. Oh well.
+    local taskbar_height = 46
+    local x = (screen.width * 0.5 - width * 0.5)
+    -- Note: This `+ 1` might be wrong on your system.
+    local y = (screen.height * 0.5 - height * 0.5) - taskbar_height + 1
   
     wezterm.GLOBAL.windows_centered[window_id] = true
   
     window:set_position(x, y)
-  end
+end
   
-  wezterm.on("update-status", function(window)
+wezterm.on("update-status", function(window)
     center_window_once(window)
 end)
 
