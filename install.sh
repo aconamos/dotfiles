@@ -16,7 +16,7 @@ install_deps() {
 
     # Lazy method
     echo "Running install command instead of checking for packages first (lazy method)..."
-    sudo apt install gcc cmake zsh fish
+    sudo apt install gcc cmake fish
 }
 
 install_rust_things() {
@@ -62,4 +62,8 @@ ln -sf dotfiles/dot-tmux.conf ~/.tmux.conf
 ln -sf dotfiles/dot-vim ~/.vim
 ln -sf dotfiles/dot-vimrc ~/.vimrc
 ln -sf dotfiles/dot-zshrc ~/.zshrc
+
+# Go into the tmux config, and pull the tpm module
+cd .tmux.conf
+git submodule update --init --recursive
 
