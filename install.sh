@@ -19,22 +19,6 @@ install_deps() {
     sudo apt install gcc cmake zsh fish
 }
 
-# Deprecated in favor of simpler version
-install_rust() {
-    if ! cargo --version > /dev/null; then
-        echo "Cargo not installed, installing rustup now..."
-        curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh || exit 1
-    else
-        echo "Cargo installed! Continuing..."
-    fi
-}
-
-# Deprecated in favor of simpler version
-install_rust_utils() {
-    . "$HOME/.cargo/env"
-    cargo install --locked eza starship 
-}
-
 install_rust_things() {
     # Plagiarized from github/JJGO/dotfiles/shell-setup.sh
     if [[ ! -d $HOME/.rustup ]]; then
