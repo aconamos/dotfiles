@@ -8,6 +8,15 @@ if status is-interactive
     abbr -a ll la
     abbr -a grep grep --color=auto
 
+    abbr -a g git
+    abbr -a gc git commit
+    abbr -a --set-cursor gcm git commit -m \'%\'
+    abbr -a gs git status
+    abbr -a gd git diff
+    abbr -a ga git add
+    # TODO: Figure out sensible 'git log' defaults for the log alias
+    abbr -a gl git log
+
     # --universal --export
     set -Ux EDITOR vim
 
