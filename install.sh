@@ -64,6 +64,6 @@ ln -sf dotfiles/dot-vimrc ~/.vimrc
 ln -sf dotfiles/dot-zshrc ~/.zshrc
 
 # Go into the tmux config, and pull the tpm module
-cd .tmux.conf
+cd .tmux
 git submodule update --init --recursive
 
