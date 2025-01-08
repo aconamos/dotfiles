@@ -4,8 +4,8 @@ if status is-interactive
     # Commands to run in interactive sessions can go here
     abbr -a ls eza -lh
     abbr -a la eza -lahg
-    abbr -a l ls
-    abbr -a ll la
+    abbr -a l eza -lh
+    abbr -a ll eza -lahg
     abbr -a grep grep --color=auto
 
     abbr -a g git
