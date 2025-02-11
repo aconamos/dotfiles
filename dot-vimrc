@@ -39,6 +39,7 @@ augroup END
 " Color Scheme
 colorscheme catppuccin_mocha
 
+
 " Disable compatibility with vi which can cause unexpected issues.
 set nocompatible
 
@@ -181,5 +182,5 @@ let g:airline#extensions#tabline#formatter = 'default' " default, jsformatter, u
 
 " }}}
 
-
+hi Normal guibg=NONE ctermbg=NONE
 
