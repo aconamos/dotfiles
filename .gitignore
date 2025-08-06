@@ -2,3 +2,8 @@ dotfile_bk*
 dot-vim/.netrwhist
 *~
 *.swp
+
+# not honestly sure if these are like, sensitive or not or whatever. they're clutter at best, anyways
+dot-config/*
+!dot-config/starship.toml
+!dot-config/fish

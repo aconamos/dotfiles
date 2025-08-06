@@ -12,6 +12,10 @@ Will install Rust using `rustup`, and install the following packages:
 - eza
 - starship
 
+Will install the following softwares from the internet:
+- uv
+- pnpm
+
 Will create the following directories/files:
 - `~/dotfile_bk_TIMESTAMP`
 - `~/.cargo` (as a consequence of installing Rust) 
@@ -30,4 +34,4 @@ Will backup and link the following directories/files:
 
 > [!CAUTION]
 > This script will change your `.zshrc` to immediately enter `fish`. This is probably
-> a bad change and will be fixed later.
+> a bad change and will not be fixed later.

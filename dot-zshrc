@@ -1,1 +1,3 @@
 fish
+
+. "$HOME/.local/bin/env"

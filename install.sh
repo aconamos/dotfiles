@@ -33,6 +33,8 @@ install_rust_things() {
 
 install_deps
 install_rust_things
+wget -qO- https://astral.sh/uv/install.sh | sh
+wget -qO- https://get.pnpm.io/install.sh | sh -
 
 # This isn't going to play well on some systems. Too lazy to fix it right now, though.
 chsh -s /usr/bin/fish
