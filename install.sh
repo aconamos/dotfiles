@@ -16,7 +16,7 @@ install_deps() {
 
     # Lazy method
     echo "Running install command instead of checking for packages first (lazy method)..."
-    sudo apt install gcc cmake fish curl vim gpg lsb-release
+    sudo apt install gcc cmake fish curl vim gpg lsb-release g++
 }
 
 install_rust_things() {
