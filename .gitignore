@@ -7,3 +7,4 @@ dot-vim/.netrwhist
 dot-config/*
 !dot-config/starship.toml
 !dot-config/fish
+!dot-config/helix/config.toml

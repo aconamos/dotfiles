@@ -1,0 +1,9 @@
+theme = "material_palenight"
+
+[editor.file-picker]
+hidden = false
+
+[editor.cursor-shape]
+insert = "bar"
+normal = "block"
+select = "underline"
