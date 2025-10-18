@@ -13,6 +13,8 @@ if status is-interactive
     abbr -a g git
     abbr -a gc git commit
     abbr -a --set-cursor gcm git commit -m \'%\'
+    abbr -a gcae git commit --amend
+    abbr -a gca git commit --amend --no-edit
     abbr -a gs git status
     abbr -a gd git diff
     abbr -a ga git add
