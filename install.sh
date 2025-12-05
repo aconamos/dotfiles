@@ -68,4 +68,4 @@ ln -sf dotfiles/dot-zshrc ~/.zshrc
 # Go into the tmux config, and pull the tpm module
 cd .tmux
 git submodule update --init --recursive
-
+fish -c "et -U fish_greeting \"🐟\""
